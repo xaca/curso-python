@@ -60,3 +60,9 @@ La mayoría de herramientas para programar son gratuitas, faciles de encontrar, 
     - [Chat gpt](https://chatgpt.com/)
     - [v0](https://v0.dev/)
     - [Gemini](https://gemini.google.com/app?hl=es)
+ 
+## Cursos en línea
+
+Hay muchos cursos, por ahora solo pongo el acceso a mi curso online, completamente gratuito y pensado para personas sin conocimientos previos y que quieren empezar paso a paso, con calma, con empatía (paciencia, calma, precoupación por el proceso, pasión...) desde los fundamentos, desde lo basico.
+
+  - [Curso python online](https://xacarana.com/python.html)
