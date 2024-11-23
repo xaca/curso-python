@@ -31,3 +31,8 @@ print(condicion3) # Salida: True
 
 nacionalidad = "estadounidense"
 condicion4 = (edad > 15 and edad < 18) and (nacionalidad == "colombiana")
+
+# Una condición, es un punto de decisión, es un camino que se divide en dos, uno si la condición es verdadera y otro si la condición es falsa.
+
+# Ejemplo: Un switch de luz, si la luz está apagada, la enciende, si la luz está encendida, la apaga. Una llave de agua, si la llave está cerrada, la abre, si la llave está abierta, la cierra. Un puerta, si la puerta está cerrada, la abre, si la puerta está abierta, la cierra. 
+
