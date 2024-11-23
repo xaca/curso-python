@@ -4,7 +4,7 @@
     < menor que
     >= mayor igual
     <= menor igual
-    == igual que
+    == igual que (Comparación, un solo igual es asignación)
     != diferente
     
 """
