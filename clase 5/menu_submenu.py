@@ -57,18 +57,44 @@ while opcion != 5:
             print("Valor incorrecto")
             continue
     elif opcion == 4:
-        print("  ____________________________")
-        print(" |  ________________________  |")
-        print(" | |                        | |")
-        print(" | |                        | |")
-        print(" | |     Calculadora        | |")
-        print(" | |     Cientifica         | |")
-        print(" | |      1. Seno           | |")
-        print(" | |      2. Coseno         | |")
-        print(" | |      3. Raíz           | |")
-        print(" | |      4. Regresar       | |")
-        print(" | |________________________dc|")
-        print(" |____________________________|")
+        while opcion != 0:
+            print("  ____________________________")
+            print(" |  ________________________  |")
+            print(" | |                        | |")
+            print(" | |                        | |")
+            print(" | |     Calculadora        | |")
+            print(" | |     Cientifica         | |")
+            print(" | |      1. Seno           | |")
+            print(" | |      2. Coseno         | |")
+            print(" | |      3. Raíz           | |")
+            print(" | |      0. Regresar       | |")
+            print(" | |________________________dc|")
+            print(" |____________________________|")
 
+            opcion = input("Seleccione una opción: ")
+
+            try:
+                opcion = int(opcion)
+                if opcion == 1:
+                    print("Seno")
+                elif opcion == 2:
+                    print("Coseno")
+                elif opcion == 3:
+                    a = input("Ingrese el número:")
+                    try:
+                        a = float(a)
+                        if a < 0:
+                            print("No se puede calcular la raíz de un número negativo")
+                            continue
+                        else:
+                            print(a**(1/2))
+                    except:
+                        print("Valor incorrecto")
+                        continue
+                elif opcion == 4:
+                    break
+            except:
+                print("Valor incorrecto")
+            
     input("Presione enter para continuar")
     
