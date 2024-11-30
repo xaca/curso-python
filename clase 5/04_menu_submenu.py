@@ -5,6 +5,8 @@
 # Segunda parte, validar la funcionalidad del menú, que permita al usuario seleccionar calculadora cientifica y acceder al submenu.
 # Tercera parte, validar la funcionalidad del submenu, regresar al menú principal.
 
+# TODO: Terminar la calculadora científica y el resto de operaciones pendientes
+
 # Primera parte
 opcion = 0
 error = False
