@@ -1,0 +1,1 @@
+#Realizar la impresión de una tirilla de pago de un supermercado.

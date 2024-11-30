@@ -32,3 +32,14 @@ print(salida)
 # "Anita lava la tina" -> True
 # "Hola Mundo" -> False
 # "Reconocer" -> True
+
+cadena = "reconocer"
+cadena_invertida = ""
+for i in range(len(cadena)-1, -1, -1):
+    cadena_invertida += cadena[i]
+
+if cadena == cadena_invertida:
+    print("Es palindroma")
+else:
+    print("No es palindroma")
+
