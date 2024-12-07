@@ -32,3 +32,30 @@ print(f"El año es {a}, el mes es {m} y el día es {d}")
         Pan   x 6  a $1200  ... $7200
         Queso x 12 a $3000  ... $36000    
 """
+
+registro = "2,2-3,3-12,6-34,12;2300#530#1200#3000;Huevo|Leche|Pan|Queso"
+print(registro)
+datos = registro.split(";")
+codigos = datos[0]
+precios = datos[1]
+nombres = datos[2]
+
+codigos = codigos.split("-")
+precios = precios.split("#")
+nombres = nombres.split("|")
+
+cantidad = []
+cod_temp = []
+temp = ""
+
+for i in range(len(codigos)):
+    temp = codigos[i].split(",")
+    cod_temp.append(temp[0])
+    cantidad.append(temp[1])
+
+codigos = cod_temp
+
+print(codigos)
+print(precios)
+print(nombres)
+print(cantidad)
