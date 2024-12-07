@@ -17,3 +17,5 @@ for i in range(len(precios)):
         print(nombres[i].capitalize(),precios[i],cantidad[i],precios[i]*cantidad[i])
 
 print(str(subtotal).rjust(20,"-"))
+
+#TODO: Mejorar la impresión de la factura, tenga en cuenta el espacio del ancho y un contenido proporcional que sea legible
