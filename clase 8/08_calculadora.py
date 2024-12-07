@@ -1,15 +1,15 @@
 # Crear las funciones suma, resta, multiplicación y división, que reciban dos números y retornen el resultado de la operación. E invocarla desde una función llamada menu. 
 
-def suma(a, b):
+def suma(a,b):
     return a + b
 
-def resta(a, b):
+def resta(a,b):
     return a - b
 
-def multiplicacion(a, b):
+def multiplicacion(a,b):
     return a * b
 
-def division(a, b):
+def division(a,b):
     return a / b
 
 def menu():
@@ -24,8 +24,18 @@ def menu():
             if opcion == 5:
                 break
             else:
+                if opcion == 1:
+                    print("Sumando".center(50, "-"))
+                elif opcion == 2:
+                    print("Restando".center(50, "-"))
+                elif opcion == 3:
+                    print("Multiplicando".center(50, "-"))
+                elif opcion == 4:
+                    print("Dividiendo".center(50, "-"))
+
                 a = float(input("Ingrese el primer número: "))
                 b = float(input("Ingrese el segundo número: "))
+
                 if opcion == 1:
                     print(suma(a, b))
                 elif opcion == 2:
@@ -39,5 +49,9 @@ def menu():
                         print(division(a, b))
                 else:
                     print("Opción no válida")
+
+                input("Presione una tecla para continuar")
         except:
             print("Ingrese un número válido")
+
+menu()
