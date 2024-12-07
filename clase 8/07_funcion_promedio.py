@@ -1,6 +1,10 @@
 # Crear una función que lea n números y retorne una lista
 # Crear una función que calcule el promedio de una lista de números 
 
+"""
+Tener precaución con el contexto de una función, es decir el inventario interno de una función solo puede ser accedida por ella misma, no por funciones o código que este en el exterior.
+"""
+
 def leer_numeros():
     lista = []
     while True:
@@ -15,9 +19,9 @@ def leer_numeros():
         except:
             print("Ingrese un número válido")
 
-def promedio(lista):
-    return sum(lista)/len(lista)
+def promedio(numeros):
+    return sum(numeros)/len(numeros)
 
-lista = leer_numeros()
-print(lista)
-print(promedio(lista))
+datos = leer_numeros() #Invocación de la función leer_numeros
+print(datos)
+print(promedio(datos))
