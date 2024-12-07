@@ -33,7 +33,10 @@ def menu():
                 elif opcion == 3:
                     print(multiplicacion(a, b))
                 elif opcion == 4:
-                    print(division(a, b))
+                    if b == 0:
+                        print("No se puede dividir por cero")
+                    else:
+                        print(division(a, b))
                 else:
                     print("Opción no válida")
         except:
