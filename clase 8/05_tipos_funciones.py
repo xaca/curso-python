@@ -6,6 +6,7 @@ Tipos de funciones:
 1. Funciones sin parametros y sin retorno
 2. Funciones sin parametros y con retorno
 3. Funciones con parametros y sin retorno
+4. Funciones con parametros y con retorno
 
 ¿Como se define una función en Python?
 
@@ -15,13 +16,14 @@ def nombre_funcion(parametros):
 
 Un parametro es una variable. Los parametros son los valores que recibe la función para realizar una operación.
     
-Para llamar a una función se utiliza el nombre de la función seguido de parentesis y los parametros que recibe la función. 
+Para llamar a una función se utiliza el nombre de la función seguido de parentesis y los argumentos que recibe la función. 
 
-nombre_funcion(parametros)
+nombre_funcion(argumentos)
 
-Nota: Si la función no recibe parametros, los parentesis se dejan vacios.
+Nota: Si la función no recibe parametros, los parentesis se dejan vacios, sin argumentos.
 
 """
+# Funciones sin parametros y sin retorno
 def saludar():
     print("Hola mundo")
 
@@ -39,6 +41,8 @@ def sumar(a, b):
     print(a + b)
 
 sumar(5, 3) # 8
+sumar(10, 20) # 30
+sumar(23, 54) # 77
 
 # Funciones con parametros y con retorno
 
