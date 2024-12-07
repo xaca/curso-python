@@ -15,3 +15,19 @@ else:
     print("Hora no válida")
 
 """
+
+def saludo_hora_militar(hora):
+    if hora < 12:
+        print("Buenos días")
+    elif hora < 19:
+        print("Buenas tardes")
+    elif hora < 24:
+        print("Buenas noches")
+    else:
+        print("Hora no válida")
+
+#Invocación de la función
+saludo_hora_militar(20) # Buenas noches
+saludo_hora_militar(5) # Buenos días
+saludo_hora_militar(14) # Buenas tardes
+saludo_hora_militar(12) # Buenas tardes
