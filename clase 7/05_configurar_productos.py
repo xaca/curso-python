@@ -4,6 +4,19 @@
 
 # La última lista, es factura que permite calcular el subtotal, teniendo presente que el producto se ingresa por codigo, para calcular el valor facturado por producto. Al finalizar se totaliza el consumo.
 
-factura = [0,0,0,0,0,0,0,0,0,0]
-factura[2] = 3
-print(factura)
+nombres = ["arroz","papa","carne","pollo","aceite","sal"]
+precios = [1500,2000,50000,40000,12000,3000]
+print("cantidad de productos",len(precios))
+cantidad = [1,0,0,0,1,0]
+factura = []
+subtotal = 0
+
+print(precios)
+print(cantidad)
+
+for i in range(len(precios)):
+    if cantidad[i]>0:
+        subtotal = subtotal + precios[i]*cantidad[i]
+        print(nombres[i],precios[i],cantidad[i],precios[i]*cantidad[i])
+
+print(str(subtotal).rjust(20,"-"))
