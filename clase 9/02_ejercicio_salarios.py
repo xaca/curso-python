@@ -29,11 +29,21 @@ def leer_salarios():
 
 def promedio_salarios(lista_salarios):
     # Promedio de salarios
-    print("Promedio de salarios")
+    cantidad_empleados = len(lista_salarios)
+    if cantidad_empleados > 0:
+        return sum(lista_salarios)/cantidad_empleados
+    else:
+        return 0
 
 def salario_mayor(lista_salarios):
     # Salario mayor
-    print("Salario mayor")
+    num_max = 0
+
+    for i in lista_salarios:
+        if i > num_max:
+            num_max = i
+
+    return num_max
 
 def salario_menor(lista_salarios):
     # Salario menor
@@ -48,10 +58,20 @@ def promedio_salario_mayor_10m(lista_salarios):
     print("Promedio de salario de empleados con salario mayor a 10.000.000")
 
 def main():
+    promedio = 0
     lista_salarios = leer_salarios()
-    print(lista_salarios)
-    #lista_salarios = leer_salarios()
-    #promedio_salarios(lista_salarios)
+    promedio = promedio_salarios(lista_salarios)
+
+    if promedio > 0:
+        print(f"El promedio de salarios es: {promedio}")
+        input("Presione una tecla para continuar...")
+
+    salario_max = salario_mayor(lista_salarios)
+
+    if salario_max > 0:
+        print(f"El salario mayor es: {salario_max}")
+        input("Presione una tecla para continuar...")
+
 
 if __name__ == "__main__":
     main()
