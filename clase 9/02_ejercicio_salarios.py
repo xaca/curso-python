@@ -47,7 +47,7 @@ def salario_mayor(lista_salarios):
 
 def salario_menor(lista_salarios):
     # Salario menor
-    print("Salario menor")
+    return min(lista_salarios)
 
 def empleados_salario_inferior(lista_salarios):
     # Empleados con salario inferior a 10.000.000
@@ -59,6 +59,8 @@ def promedio_salario_mayor_10m(lista_salarios):
 
 def main():
     promedio = 0
+    salario_max = 0
+    salario_min = 0
     lista_salarios = leer_salarios()
     promedio = promedio_salarios(lista_salarios)
 
@@ -72,6 +74,11 @@ def main():
         print(f"El salario mayor es: {salario_max}")
         input("Presione una tecla para continuar...")
 
+    salario_min = salario_menor(lista_salarios)
+
+    if salario_min > 0:
+        print(f"El salario menor es: {salario_min}")
+        input("Presione una tecla para continuar...")
 
 if __name__ == "__main__":
     main()
