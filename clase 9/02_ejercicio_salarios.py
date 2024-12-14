@@ -89,7 +89,7 @@ def main():
         print(f"El salario mayor es: {salario_max}")
         input("Presione una tecla para continuar...")
     else:
-        print("Verifique los datos y vueal a intentarlo")
+        print("Verifique los datos y vuelva a intentarlo")
 
     salario_min = salario_menor(lista_salarios)
 
@@ -97,7 +97,7 @@ def main():
         print(f"El salario menor es: {salario_min}")
         input("Presione una tecla para continuar...")
     else:
-        print("Verifique los datos y vueal a intentarlo")
+        print("Verifique los datos y vuelva a intentarlo")
 
     lista_inferior_10m = empleados_salario_inferior(lista_salarios)
 
@@ -111,7 +111,7 @@ def main():
         print(f"El promedio de salarios de empleados con salario mayor a 10.000.000 es: {promedio_mayor_10m}")
         input("Presione una tecla para continuar...")
     else:
-        print("Verifique los datos y vueal a intentarlo")
+        print("Verifique los datos y vuelva a intentarlo")
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()
