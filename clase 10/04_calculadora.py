@@ -61,7 +61,20 @@ def menu(tipo):
 
     return opcion
 
+def leer_numero():
+    while True:
+        a = input("Ingrese el número: ")
+        try:
+            a = float(a)
+            return a
+        except:
+            print("Valor incorrecto")
+            continue
 
+def sumar():
+    a = leer_numero()
+    b = leer_numero()
+    return a + b
 
 def main():
 
