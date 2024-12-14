@@ -1,1 +1,19 @@
-Prueba
+Hay dos tipos de rutas, que se pueden usar para ubicar recursos en un programa, rutas absolutas y rutas relativas.
+
+- Una ruta absoluta es aquella que comienza desde la raíz del sistema de archivos, es decir una ruta completa a la ubicación del archivo. Por ejemplo, C:\Users\Usuario\Documentos\archivo.txt.
+
+- Una ruta relativa es aquella que comienza desde la ubicación del archivo que se está ejecutando. Por ejemplo, si el archivo que se está ejecutando está en C:\Users\Usuario\Documentos\, y se quiere acceder a un archivo que está en la misma carpeta, se puede usar archivo.txt. En este caso, no es necesario poner toda la ubicación del archivo, simplemente la ubicación, se calcula, con respecto a la ubicación actual del archivo que se está ejecutando.
+
+Consideraciones para usar archivos en Python:
+
+- En Python, las rutas se pueden escribir con barras invertidas (\) o con barras normales (/), pero es recomendable usar barras normales, ya que las barras invertidas son caracteres de escape.
+
+- Para obtener la ruta absoluta de un archivo, se puede usar la función os.path.abspath("archivo.txt"), que devuelve la ruta absoluta del archivo.
+
+- Para obtener la ruta relativa de un archivo, se puede usar la función os.path.join(os.path.dirname(__file__), "archivo.txt"), que devuelve la ruta relativa del archivo.
+
+- Cuando usamos rutas absolutas, es importante tener en cuenta que si se mueve el archivo a otra ubicación, la ruta absoluta cambiará, y se tendrá que modificar el código asignando la nueva ruta, para poder ubicar el recurso. Eso aplica también para otro computador, ya que las rutas absolutas son específicas de cada sistema, y por tanto no funcionan en otros equipos si se copia el código tal cual.
+
+- Cuando usamos rutas relativas, no importa si se mueve el archivo a otra ubicación, ya que la ruta relativa se calcula con respecto a la ubicación del archivo que se está ejecutando, y por tanto siempre se podrá ubicar el recurso sin importar la ubicación del archivo.
+
+- Nuestra preocupación al usar rutas relativas, será, obtener la ubicación actual donde se esta ejecutando el programa, para poder calcular la ruta relativa de los recursos que se quieren usar.
