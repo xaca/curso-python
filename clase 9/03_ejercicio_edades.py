@@ -54,9 +54,30 @@ def leer_edades(nombres):
                 print('Edad inválida.')
     return edades
 
+def persona_mas_joven(nombres, edades):
+    edad_menor = 0
+    nombre_menor = ''
+
+    for i in range(len(edades)):
+        edad_menor = edades[i]
+        nombre_menor = nombres[i]
+
+        if edades[i] < edad_menor:
+            edad_menor = edades[i]
+            nombre_menor = nombres[i]
+    
+    if edad_menor == 0:
+        print('No hay personas registradas.')
+    else:
+        print(f'La persona más joven es {nombre_menor} con {edad_menor} años.')
+
+        
+
 def main():
     nombres = leer_nombres()
     edades = leer_edades(nombres)
+
+    persona_mas_joven(nombres, edades)
     
 
 
