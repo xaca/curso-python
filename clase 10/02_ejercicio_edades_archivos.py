@@ -53,28 +53,34 @@ def personas_menores_30(nombres, edades):
     resultado = ""
     for i in range(len(edades)):
         if edades[i] < 30:
-            resultado += f"{edades[i]}#{nombres[i]};"
+            resultado += f"{edades[i]};{nombres[i]}\n"
     return resultado
 
 def cargar_datos():
+    resultado = []
     nombres = []
     edades = []
     ruta = os.path.join(os.path.dirname(__file__), "usuarios.txt")
     archivo = open(ruta, "r", encoding="utf-8")
+    
     for linea in archivo:
         datos = linea.split("#")
         nombres.append(datos[0])
         edades.append(int(datos[1]))
+    
     archivo.close()
-    print(nombres)
-    print(edades)
+    resultado.append(nombres)
+    resultado.append(edades)
+
+    return resultado
+   
 
 def main():
-    resultado = ""
     
-    cargar_datos()
-    
-    return
+    resultado = cargar_datos()
+    nombres = resultado[0]
+    edades = resultado[1]
+
     persona_mas_joven(nombres, edades)
     resultado = persona_mas_vieja(nombres, edades)
 
