@@ -47,21 +47,36 @@ def salario_mayor(lista_salarios):
 
 def salario_menor(lista_salarios):
     # Salario menor
-    return min(lista_salarios)
+    if len(lista_salarios) > 0:
+        return min(lista_salarios)
+    
+    return 0
 
 def empleados_salario_inferior(lista_salarios):
     # Empleados con salario inferior a 10.000.000
-    print("Empleados con salario inferior a 10.000.000")
+    lista = []
+    for i in lista_salarios:
+        if i < 10000000:
+            lista.append(i)
+    
+    return lista
 
 def promedio_salario_mayor_10m(lista_salarios):
     # Promedio de salario de empleados con salario mayor a 10.000.000
     print("Promedio de salario de empleados con salario mayor a 10.000.000")
+    lista = []
+    for i in lista_salarios:
+        if i > 10000000:
+            lista.append(i)
+    
+    return promedio_salarios(lista)
 
 def main():
     promedio = 0
     salario_max = 0
     salario_min = 0
     lista_salarios = leer_salarios()
+    lista_inferior_10m = []
     promedio = promedio_salarios(lista_salarios)
 
     if promedio > 0:
@@ -73,12 +88,30 @@ def main():
     if salario_max > 0:
         print(f"El salario mayor es: {salario_max}")
         input("Presione una tecla para continuar...")
+    else:
+        print("Verifique los datos y vueal a intentarlo")
 
     salario_min = salario_menor(lista_salarios)
 
     if salario_min > 0:
         print(f"El salario menor es: {salario_min}")
         input("Presione una tecla para continuar...")
+    else:
+        print("Verifique los datos y vueal a intentarlo")
+
+    lista_inferior_10m = empleados_salario_inferior(lista_salarios)
+
+    if len(lista_inferior_10m) > 0:
+        print(f"Empleados con salario inferior a 10.000.000: {len(lista_inferior_10m)}")
+        input("Presione una tecla para continuar...")
+
+    promedio_mayor_10m = promedio_salario_mayor_10m(lista_salarios)
+
+    if promedio_mayor_10m > 0:
+        print(f"El promedio de salarios de empleados con salario mayor a 10.000.000 es: {promedio_mayor_10m}")
+        input("Presione una tecla para continuar...")
+    else:
+        print("Verifique los datos y vueal a intentarlo")
 
 if __name__ == "__main__":
     main()
