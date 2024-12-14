@@ -72,14 +72,42 @@ def persona_mas_joven(nombres, edades):
     else:
         print(f'La persona más joven es {nombre_menor} con {edad_menor} años.')
 
-        
+def persona_mas_vieja(nombres, edades):
+
+    nombre_mayor = nombres[0]
+    edad_mayor = edades[0]
+    resultado = []
+    
+    for i in range(1,len(nombres)): 
+        if edades[i] > edad_mayor:
+            edad_mayor = edades[i]
+            nombre_mayor = nombres[i]
+    
+    resultado.append(nombre_mayor)
+    resultado.append(edad_mayor)
+
+    return resultado
+    #print(f'La persona más vieja es {nombre_mayor} con {edad_mayor} años.')
+
+def promedio_edades(edades):
+    print(f"El promedio de edades es {sum(edades)/len(edades)}")
+
+def mayores_50(nombres, edades):
+    resultado = []
+
+def promedio_menores_30(nombres, edades):
+    print('promedio_menores_30')      
 
 def main():
+    resultado = ""
     nombres = leer_nombres()
     edades = leer_edades(nombres)
-
     persona_mas_joven(nombres, edades)
+    resultado = persona_mas_vieja(nombres, edades)
+
+    print(f'La persona más vieja es {resultado[0]} con {resultado[1]} años.')
     
+    promedio_edades(edades)
 
 
 if __name__ == '__main__':
