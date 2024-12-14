@@ -59,7 +59,7 @@ def persona_mas_joven(nombres, edades):
     nombre_menor = ''
 
     edad_menor = edades[0]
-    nombre_menor = nombres[1]
+    nombre_menor = nombres[0]
 
     for i in range(1,len(edades)):
 
