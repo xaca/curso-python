@@ -71,3 +71,5 @@ Hay muchos cursos, por ahora solo pongo el acceso a mi curso online, completamen
 
 - [PseInt - Para aprender y practicar lógica](https://pseint.sourceforge.net/)
 - [Prueba de escritura visual online](https://pythontutor.com/)
+- [Ruta de archivos - Python](https://es.stackoverflow.com/questions/593072/qu%C3%A9-es-el-directorio-de-trabajo-actual-c%C3%B3mo-lo-determino-y-c%C3%B3mo-lo-cambio)
+- [Automate the boring stuff with python](https://automatetheboringstuff.com/)
