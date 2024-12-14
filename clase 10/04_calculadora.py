@@ -8,6 +8,7 @@
 # TODO: Terminar la calculadora científica y el resto de operaciones pendientes
 
 # Nueva versión calculadora científica
+import math
 
 def menu(tipo):
     opcion = -1
@@ -72,54 +73,75 @@ def leer_numero():
             continue
 
 def sumar():
+    print("Ingrese los números a sumar")
     a = leer_numero()
     b = leer_numero()
-    return a + b
+    print(f"La suma es {a+b}")
+
+def restar():
+    print("Ingrese los números a restar")
+    a = leer_numero()
+    b = leer_numero()
+    print(f"La resta es {a-b}")
+
+def dividir():
+    print("Ingrese los números a dividir")
+    while True:
+        a = leer_numero()
+        b = leer_numero()
+    
+        if b == 0:
+            print("No se puede dividir por cero")
+            continue
+        else:
+            print(f"La división es {a/b}")
+            break
+
+def raiz():
+    print("Ingrese el número al que se le calculará la raíz")
+    while True:
+        a = leer_numero()
+        if a < 0:
+            print("No se puede calcular la raíz de un número negativo")
+            continue
+        else:
+            print(f"La raíz es: {a**(1/2)}")
+            break
+
+def seno():
+    print("Ingrese el número al que se le calculará el seno")
+    a = leer_numero()
+    print(f"El seno es {math.sin(a)}")
+
+def coseno():
+    print("Ingrese el número al que se le calculará el coseno")
+    a = leer_numero()
+    print(f"El coseno es {math.cos(a)}")
 
 def main():
-
+    opcion = -1
     while opcion != 5:
         opcion = menu(1)
         if opcion == 1:
-            print("Sumar")
+            sumar()
         elif opcion == 2:
-            print("Restar")
+            restar()
         elif opcion == 3:
-            a = input("Ingrese el numerador:")
-            b = input("Ingrese el denominador:")
-            try:
-                a = float(a)
-                b = float(b)
-                if b == 0:
-                    print("No se puede dividir por cero")
-                    continue
-                else:
-                    print(a/b)
-            except:
-                print("Valor incorrecto")
-                continue
+            dividir()
         elif opcion == 4:
             while opcion != 0:
                 opcion = menu(2)                
                 if opcion == 1:
-                    print("Seno")
+                    seno()
                 elif opcion == 2:
-                    print("Coseno")
+                    coseno()
                 elif opcion == 3:
-                    a = input("Ingrese el número:")
-                    try:
-                        a = float(a)
-                        if a < 0:
-                            print("No se puede calcular la raíz de un número negativo")
-                            continue
-                        else:
-                            print(a**(1/2))
-                    except:
-                        print("Valor incorrecto")
-                        continue
+                    raiz()
                 elif opcion == 4:
-                    break
-                
-                
+                    break 
+
         input("Presione enter para continuar")
+
+if __name__ == "__main__":
+    main()
     
