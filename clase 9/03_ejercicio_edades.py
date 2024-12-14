@@ -16,6 +16,49 @@
         - Número de personas mayores de 50 años
         - Promedio edad de las personas menores de 30 años
 
-    Se puede usar len, append, pop, insert
+    Se puede usar len, append, pop, insert.
 
 """
+
+def leer_nombres():
+    nombres = []
+
+    while True:
+        nombre = input('Nombre: ')
+        if nombre == '0':
+            break
+        if len(nombre) < 6 or len(nombre) > 30:
+            print('El nombre debe tener entre 6 y 30 caracteres.')
+            continue
+
+        nombres.append(nombre)
+    
+    return nombres
+
+def leer_edades(nombres):
+    edades = []
+
+    for nombre in nombres:
+        while True:
+            try:
+                edad = int(input(f'Edad de {nombre}: '))
+                if edad == 0:
+                    break
+                if edad < 18 or edad > 65:
+                    print('La edad debe estar entre 18 y 65 años.')
+                    continue
+
+                edades.append(edad)
+                break
+            except:
+                print('Edad inválida.')
+    return edades
+
+def main():
+    nombres = leer_nombres()
+    edades = leer_edades(nombres)
+    
+
+
+if __name__ == '__main__':
+    main()
